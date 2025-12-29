@@ -1,0 +1,213 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    position: absolute;
+    left: 50px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.menü {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+}
+
+.menü a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    padding-bottom: 6px;
+    transition: 0.3s;
+}
+
+.menü a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #b8b8ff;
+    transition: 0.3s;
+}
+
+.menü a:hover::after {
+    width: 100%;
+}
+
+.menü a:hover {
+    color: #b8b8ff;
+}
+
+.arka-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -999;
+    filter: blur(1px) brightness(0.6); 
+}
+
+.iletisim-alani {
+    height: calc(100vh - 65px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 65px; 
+    position: relative;
+    z-index: 1;
+}
+
+.iletisim-kutu {
+    width: 420px;
+    padding: 35px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.85); 
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    box-shadow: 0 0 20px 8px rgba(173, 216, 230, 0.5);
+}
+
+.iletisim-kutu h2 {
+    color: #b8b8ff; 
+    text-shadow:  0 0 15px rgba(0, 242, 255, 0.2); 
+    margin-bottom: 10px;
+}
+
+.iletisim-kutu p {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background: transparent;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+}
+
+textarea{
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #b8b8ff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 2px solid #b8b8ff;
+    color: #b8b8ff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b8b8ff;
+    color: #000;
+}
+
+
+
+
+/* ===================== */
+/* MOBİL UYUMLULUK */
+/* ===================== */
+@media (max-width: 768px) {
+
+  /* body scroll geri gelsin */
+  body {
+    overflow-y: auto;
+  }
+
+  /* NAVBAR */
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    position: static;
+    margin-bottom: 8px;
+  }
+
+  .menü {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .menü a {
+    font-size: 14px;
+  }
+
+  /* VIDEO */
+  .arka-video {
+    object-fit: cover;
+  }
+
+  /* İLETİŞİM ALANI */
+  .iletisim-alani {
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 20px 40px;
+    margin-top: 0;
+  }
+
+  .iletisim-kutu {
+    width: 100%;
+    max-width: 360px;
+    padding: 25px;
+  }
+
+  .iletisim-kutu h2 {
+    font-size: 24px;
+  }
+
+  .iletisim-kutu p {
+    font-size: 14px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 14px;
+  }
+}

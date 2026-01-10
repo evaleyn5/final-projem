@@ -1,0 +1,557 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+}
+
+.nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
+  z-index: 1000;
+}
+
+.logo{
+  position: absolute;
+  font-size: 26px;
+  color: white;
+  font-weight: 700;
+  left: 50px;
+  letter-spacing: 2px;
+}
+
+.logo span{
+  color: #8B5CF6; 
+}
+
+.menü{
+  display: flex;
+  gap: 50px; 
+  list-style: none;
+}
+
+.menü li a{
+  color: #ffffff;
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  padding-bottom: 8px;
+}
+
+.menü li a::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #b8b8ff; 
+  transition: 0.4s ease;
+}
+
+.menü li a:hover::after{
+  width: 100%; 
+}
+
+.menü li a:hover{
+  font-weight: bold;
+  color: #b8b8ff;
+}
+
+/*1.SAYFAYA GEÇİYORUM*/
+
+.anasayfa2 {
+  height: 100vh;
+  padding: 120px 60px;
+  background-image: url(uzaykısımresim/arkaplan2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.evren-uzay1 {
+  max-width: 1200px;
+  margin-left: 0;     
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+}
+
+.ilkyazi h1 {
+  font-size: 48px;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  transform: translateX(35px);
+  margin-top: 20px;
+}
+
+.ilkyazi h1 span {
+  color: #f28538;
+}
+
+.ilkyazi p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: white;
+  margin-bottom: 60px;
+  transform: translateX(35px);
+}
+
+.resim-alani{
+  display: flex;
+  flex-direction: column;
+  justify-self: end;  
+}
+
+.resim-alani img{
+  width: 170%;         
+  max-width: none;   
+  height: 560px;       
+  object-fit: cover;   
+  border-radius: 12px;
+  margin-top: -10px;  
+  margin-left: -25px;
+  transition: transform 0.4s ease; 
+} 
+
+.resim-alani:hover {
+  transform: scale(1.05); 
+}
+
+
+/*2.SAYFAYA GEÇİYORUM*/
+
+.anasayfa3 {
+  height: 100vh;
+  padding: 120px 60px;
+  background-image: url(uzaykısımresim/arkaplan3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.patlama1 {
+  max-width: 1200px;
+  margin-left: 0;     
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+}
+
+.ilkyazi2 h1 {
+  font-size: 50px;
+  color: white;
+  line-height: 1.2;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  transform: translateX(30px);
+}
+
+.ilkyazi2 h1 span {
+  color: #f28538;
+}
+
+.ilkyazi2 p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: white;
+  margin-bottom: 40px;
+  transform: translateX(30px);
+}
+
+.resim-alani2{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resim-alani2 img{
+  height: 320px;       
+  object-fit: cover;   
+  margin-top: -45px;
+  border-radius: 12px;
+  transition: transform 0.4s ease; 
+}
+
+.resim-alani2 img:hover {
+  transform: scale(1.05); 
+}  
+
+.resim-4{
+  display: flex;
+  justify-content: center;
+}
+
+.resim-4 img{
+  height: 310px;
+  width: 70%;
+  border-radius: 12px;
+  margin-top: -10px;
+  transform: translateX(55px)
+}
+
+.üst-resimler {
+  display: flex;
+  gap: 16px;
+}
+
+.üst-resimler .resim1{
+  width: 80%;
+  transform: translateX(-20px);
+}
+
+.üst-resimler .resim2{
+  width: 50%;
+  transform: translateX(-20px);
+}
+
+.üst-resimler .resim3{
+  width: 80%;
+  transform: translateX(-20px);
+}
+
+
+/*3.SAYFAYA GEÇİYORUM*/
+
+.anasayfa4 {
+  height: 100vh;
+  padding: 120px 60px;
+  background-image: url(uzaykısımresim/arkaplan4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.evrenyapi {
+  max-width: 1200px;
+  margin-left: 0;     
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 50px;
+}
+
+.ilkyazi3 h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  color: white;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  transform: translateX(30px);
+}
+
+.ilkyazi3 h1 span {
+  color: #f28538;
+}
+
+.ilkyazi3 li {
+  font-size: 18px;
+  line-height: 1.7;
+  color: white;
+  margin-bottom: 40px;
+  transform: translateX(30px);
+}
+
+.resim-alani3{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.resim-alani3 img{
+  object-fit: cover;   
+  border-radius: 12px;
+  transition: transform 0.4s ease; 
+}
+
+.resim-alani3 img:hover {
+  transform: scale(1.05); 
+}
+
+.resim-alani3 .resim-1{
+  width: 70%;
+  height: 360px;
+  transform: translateX(300px);
+  margin-top: -50px;
+}
+
+.resim-alani3 .resim-2{
+  width: 70%;
+  height: 360px;
+  transform: translateX(-12px);
+  margin-top: -230px;
+}
+
+.resim-alani3 .resim-3{
+  width: 70%;
+  height: 280px;
+  margin-top: -200px;
+  transform: translateX(320px);
+}
+
+
+/*4.SAYFAYA GEÇİYORUM*/
+
+.anasayfa5 {
+  height: 100vh;
+  padding: 120px 60px;
+  background-image: url(uzaykısımresim/arkaplan5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.insanlik {
+  max-width: 1400px;
+  margin: auto;    
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+.solkisim{
+  margin-top: 90px;
+  color: white;
+}
+
+.solkisim h3{
+  margin: 8px 0;
+  font-size: 22px;
+  transform: translateX(30px);
+}
+
+.solkisim-alan h3 span{
+  color: #f28538;
+}
+
+.solkisim p{
+  font-size: 16px;
+  color: white;
+  transform: translateX(30px);
+}
+
+.resimler {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: -47px;
+}
+
+.resimler img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease; 
+}
+
+.resimler img:hover {
+  transform: scale(1.05); 
+}
+
+.sagkisim{
+  color: white;
+  text-align: left;
+  margin-top: 80px;
+}
+
+.sagkisim h1 {
+  font-size: 56px;
+  color: white;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  transform: translateX(30px);
+}
+
+.sagkisim h1 span {
+  color: #f28538;
+}
+
+.sagkisim p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  margin-bottom: 25px;
+  transform: translateX(30px);
+}
+
+.sagkisim ul {
+  list-style: disc;
+  padding-left: 0;
+}
+
+.sagkisim ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: white;
+  line-height: 1.3;
+  transform: translateX(30px);
+}
+
+
+/*5.SAYFAYA GEÇİYORUM*/
+
+.anasayfa6 {
+  height: 100vh;
+  padding: 120px 60px;
+  background-image: url(uzaykısımresim/arkaplan6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.uzay-teknoloji {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.uzay-resimler {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.uzay-resimler img {
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease; 
+}
+
+.uzay-resimler img:hover {
+  transform: scale(1.05); 
+}
+
+.uzay-resimler .dikey{
+  width: 100%;
+  height: 400px;
+  margin-top: -80px;
+}
+
+.uzay-resimler .yan-dikey{
+  width: 80%;
+  height: 320px;
+  margin-top: 70px;
+}
+
+.uzay-resimler .alt{
+  width: 100%;
+  height: 260px;
+  margin-top: -70px;
+}
+
+.uzay-yazi {
+  color: white;
+  margin-top: -80px;
+  transform: translateX(-30px);
+}
+
+.uzay-yazi h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+
+.uzay-yazi h1 span {
+  color: #f28538;
+}
+
+.uzay-yazi p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+}
+
+
+
+/* 📱 MOBİL DÜZEN – UZAY SAYFASI */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .nav {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .menü {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* TÜM BÖLÜMLER */
+  section {
+    height: auto !important;
+    padding: 80px 20px !important;
+  }
+
+  /* GRID → COLUMN */
+  .evren-uzay1,
+  .patlama1,
+  .evrenyapi,
+  .insanlik,
+  .uzay-teknoloji {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* YAZILAR */
+  h1 {
+    font-size: 28px !important;
+    text-align: center;
+    transform: none !important;
+  }
+
+  h3 {
+    text-align: center;
+    transform: none !important;
+  }
+
+  p, li {
+    font-size: 16px !important;
+    text-align: center;
+    transform: none !important;
+  }
+
+  /* RESİMLER */
+  img {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  /* ÖZEL ALANLAR */
+  .resim-alani,
+  .resim-alani2,
+  .resim-alani3,
+  .resimler,
+  .uzay-resimler {
+    align-items: center;
+  }
+
+}

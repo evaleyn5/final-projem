@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height: 100vh;
+}
+
+.nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px); 
+  z-index: 1000;
+}
+
+.logo{
+  position: absolute;
+  font-size: 26px;
+  color: white;
+  font-weight: 700;
+  left: 50px;
+  letter-spacing: 2px;
+}
+
+.logo span{
+  color: #8B5CF6; 
+}
+
+.menü{
+  display: flex;
+  gap: 50px; 
+  list-style: none;
+}
+
+.menü li a{
+  color: #ffffff;
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  padding-bottom: 8px;
+}
+
+.menü li a::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #b8b8ff; 
+  transition: 0.4s ease;
+}
+
+.menü li a:hover::after{
+  width: 100%; 
+}
+
+.menü li a:hover{
+  font-weight: bold;
+  color: #b8b8ff;
+}
+
+.gezegen{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  position: relative;
+}
+
+.arka-kisim{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+.icerik{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.icerik.ters{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+.yazi{
+  position: relative;
+}
+
+.icerik .yazi{
+  left: -30px;
+}
+
+.icerik.ters .yazi{
+  left: auto;
+  right: -40px;
+}
+
+.yazi h1{
+  font-size: 80px;
+  color: #f28538;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.yazi p{
+  font-size: 18px;
+  color: #d1d1d1;
+  line-height: 1.8;
+}
+
+.bilgi-kutusu{
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.bilgi-karti{
+  background: rgba(255,255,255,0.05);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border-left: 3px solid #f28538;
+}
+
+.etiket{
+  font-size: 12px;
+  color: #888;
+}
+
+.deger{
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+}
+
+.cerceve {
+  width: 600px;
+  height: 480px;
+  border-radius: 45px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 20px 8px rgba(173, 216, 230, 0.5);
+}
+
+.cerceve img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* 📱 MOBİL DÜZEN – GEZEGEN SAYFASI */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  .nav {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+
+  .logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .menü {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* GEZEGEN BÖLÜMLERİ */
+  .gezegen {
+    min-height: auto;
+    padding: 100px 20px;
+  }
+
+  /* İÇERİK TEK SÜTUN */
+  .icerik,
+  .icerik.ters {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* YAZI */
+  .icerik .yazi,
+  .icerik.ters .yazi {
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  .yazi h1 {
+    font-size: 32px;
+  }
+
+  .yazi p {
+    font-size: 16px;
+  }
+
+  /* BİLGİ KUTULARI */
+  .bilgi-kutusu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bilgi-karti {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* RESİM */
+  .cerceve {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .cerceve img {
+    width: 100%;
+    height: auto;
+  }
+
+}

@@ -32,6 +32,16 @@ This is a **personal portfolio website** built using **HTML and CSS**. It showca
 
 This project demonstrates my front-end development skills and design abilities for portfolio purposes.
 
+## 🌐 Live Demo
+
+https://evaleyn5.github.io/stellar-portfolio-html-css/gezegen.html
+
+
+## 📸 Preview
+
+![Screenshot 1](screenshot1.png)
+![Screenshot 2](screenshot2.png)
+
 👩‍💻 Developer
 
 Aleyna
